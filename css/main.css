@@ -1,0 +1,49 @@
+body {
+    background-color: lightblue;
+}
+
+.done {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.todo-filter {
+    background-color: lightseagreen;
+    padding: 5px;
+}
+
+.todo-stat {
+    background-color: lightslategray;
+    padding: 5px;
+    margin: 5px;
+}
+
+.todo-stat .todo-total-count,
+.todo-stat .todo-active-count {
+    color: lightblue;
+    font-weight: bold;
+}
+
+.todo-list li {
+    padding: 3px;
+    border-bottom: 1px solid darkgrey;
+}
+
+.todo-list button {
+    float: right
+}
+
+[name=todo-txt]:focus {
+    background-color: lightskyblue;
+    transition: .5s;
+}
+
+.created-date {
+    position: absolute;
+    right: 10%;
+}
+
+.importance {
+    position: absolute;
+    right: 40%;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - MVC</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onload="onInit()">
+    <h1>Lets Todo</h1>
+
+    <section class="todo-filter">
+        <h2>Filter</h2>  
+        <select onchange="onSetFilter(this.value)">
+            <option value="ALL">All</option>
+            <option value="ACTIVE">Active</option>
+            <option value="DONE">Done</option>
+        </select>
+        <select onchange="onSetSort(this.value)">
+            <option value="DATE">Date</option>
+            <option value="IMPORTANCE">Importance</option>
+            <option value="ALPHABETICAL">Alphabetical</option>
+        </select>
+    </section>
+
+    <ul class="todo-list"></ul>
+    <section class="todo-stat">
+        <span class="todo-total">Total todos: </span>
+        <span class="todo-total-count"></span>
+        <span class="todo-active">Active: </span>
+        <span class="todo-active-count"></span>
+    </section>
+
+    <form onsubmit="onAddTodo(event)">
+        <input type="text" name="todo-txt" placeholder="What need to be done?" />
+        <input type="text" name="todo-importance-txt" placeholder="Importance (1-3)" />
+        <button>Add</button>
+    </form>
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/todo.service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
